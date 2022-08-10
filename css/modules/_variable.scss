@@ -1,0 +1,54 @@
+
+//color
+$lightgrey: #f7f7f7;
+$blue: #63CDF6;
+$lightblue: #EFFAFE;
+$darkblue: #3C829D;
+$footerblue: #17323D;
+
+//font
+$mainfont: 'Poppins', sans-serif;
+
+@mixin nav-links {
+  font-family: $mainfont;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+
+@mixin pg-text {
+  font-family: $mainfont;
+  color: black;
+  text-align: center;
+}
+
+@mixin main-btn {
+  display: block;
+  margin: auto;
+  width: 80%;
+  font-family: $mainfont;
+  background-color: $blue;
+  color: white;
+  padding: 20px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+@mixin btn-secondary {
+  display: block;
+  margin: auto;
+  width: 45%;
+  font-family: $mainfont;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+@mixin form-text {
+  font-family: $mainfont;
+  color: black;
+  font-size: 16px;
+  font-weight: 200;
+}

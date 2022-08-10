@@ -1,0 +1,867 @@
+@import 'modules/variable';
+@import 'modules/navbar';
+@import 'modules/hero';
+@import 'modules/footer';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  @include pg-text;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 30px 0px;
+}
+
+h3 {
+  @include pg-text;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+// back to top button
+.btn-to-top {
+  background-color: $blue;
+  color: white;
+  border-radius: 5px;
+}
+.btn-to-top:hover {
+  border: 1px solid black;
+  color: white;
+  box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 5;
+}
+
+.sponsors-img-container {
+  display: none;
+  #sponsors {
+    width: 100%;
+  }
+}
+
+//Recent Campaigns Section AND Recent News Section
+
+.section-container {
+  padding: 30px;
+  text-align: center;
+  background-color: $lightblue;
+
+  .card-container {
+    margin: 30px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .card-container-news {
+    margin: 30px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .form-text {
+    @include form-text;
+  }
+  .image {
+    position: relative;
+  }
+  #card-img {
+    display: block;
+    width:100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .pg-sub-text {
+    @include pg-text;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 20px;
+  }
+  .pg-text {
+    @include pg-text;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 30px;
+  }
+  .pg-link {
+    @include pg-text;
+    font-size: 18px;
+    color: $blue;
+  }
+  .button-container {
+    margin-top: 30px;
+  }
+  .button {
+    @include main-btn;
+    border: 0px;
+  }
+  a.button:hover {
+    border: 1px solid black;
+    text-decoration: none !important;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+    transition: all 0.2s ease;
+  }
+  .social-links {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 0px 10px;
+  }
+  .link-container-socials {
+    display: flex;
+    justify-content: center;
+  }
+  .donate-text-container {
+    margin: 30px 0px;
+    h3, p {
+      text-align: left;
+    }
+    p {
+      margin: 0;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//Newsletter Section
+.section-container-2 {
+  padding: 30px;
+  text-align: center;
+
+  .card-container {
+    margin: 30px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .image {
+    position: relative;
+  }
+  #card-img {
+    display: block;
+    width:100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .pg-sub-text {
+    @include pg-text;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 20px;
+  }
+  .pg-text {
+    @include pg-text;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 30px;
+  }
+  .pg-link {
+    @include pg-text;
+    font-size: 18px;
+    color: $blue;
+  }
+  .mobile-text {
+    display: block;
+  }
+  .tablet-text {
+    display: none;
+  }
+  .form-label {
+    @include pg-text;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  .button-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .button {
+    @include main-btn;
+    border: 0px;
+  }
+  button.button:hover {
+    border: 1px solid black;
+    text-decoration: none !important;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+    transition: all 0.2s ease;
+  }
+  a.button:hover {
+    border: 1px solid black;
+    text-decoration: none !important;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+    transition: all 0.2s ease;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .committee-content-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .pg-sub-text {
+      @include pg-text;
+      font-size: 12px;
+      font-weight: 200;
+      line-height: 20px;
+      padding: 5px;
+    }
+    .committee-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .committee-card {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  }
+  #section-img {
+    width: 85%;
+    margin: auto;
+  }
+  #section-img-2 {
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .text-container {
+    height: 500px;
+    overflow: scroll;
+  }
+  .form-text {
+    @include form-text;
+  }
+  .checkbox-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    #check-box {
+      transform: scale(1.5);
+      margin-top: 2px;
+    }
+    #sign-up {
+      width: 88%;
+      text-align: left;
+      padding-left: 10px;
+      font-family: $mainfont;
+      color: black;
+      font-size: 12px;
+      font-weight: 200;
+    }
+  }
+
+}
+
+.section-container-3 {
+  padding: 30px;
+
+  .more-details-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .details-img {
+    margin: auto;
+  }
+
+  .details p, h3{
+    text-align: left;
+  }
+
+  .details {
+    margin-bottom: 30px;
+  }
+
+  .pg-sub-text {
+    @include pg-text;
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 8px;
+  }
+  #section-img-2 {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.donate-form-container {
+  padding: 15px;
+  margin: 30px;
+  background-color: $lightblue;
+  box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+
+  h3 {
+    text-align: left;
+    margin: 30px 0px;
+  }
+  .button {
+    @include btn-secondary;
+    text-align: center;
+    margin: 5px;
+  }
+  button.button:hover {
+    border: 1px solid black;
+    text-decoration: none !important;
+    background-color: $blue;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+    transition: all 0.2s ease;
+  }
+  .button-primary {
+    @include main-btn;
+    border: 0;
+  }
+  button.button-primary:hover {
+    border: 1px solid black;
+    text-decoration: none !important;
+    background-color: $blue;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(100,100,100,0.75);
+    transition: all 0.2s ease;
+  }
+  .form-text {
+    @include form-text;
+  }
+  .donation-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .checkbox-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    #check-box {
+      transform: scale(1.5);
+      margin-top: 2px;
+    }
+    #sign-up {
+      width: 88%;
+      text-align: left;
+      padding-left: 10px;
+      font-family: $mainfont;
+      color: black;
+      font-size: 12px;
+      font-weight: 200;
+    }
+  }
+}
+
+.gallery-section-container {
+  padding: 30px;
+
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .gallery-img {
+      width:50%;
+      height: 120px;
+      object-fit: cover;
+      padding: 5px;
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .gallery-section-container {
+    .gallery-container{
+      .gallery-img {
+        height: 200px;
+      }
+    }
+  }
+  .section-container-2 {
+    .committee-content-container{
+      .committee-card{
+        width: 50%;
+        padding: 0px 10px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+  .gallery-section-container {
+    .gallery-container{
+      .gallery-img {
+        height: 250px;
+      }
+    }
+  }
+
+  .section-container-2 {
+    padding: 30px 60px;
+
+    .button {
+      width: 30%;
+    }
+    a.button {
+      font-size: 20px;
+    }
+    button.button{
+      font-size: 20px;
+    }
+    .tablet-text {
+      display: block;
+    }
+    .mobile-text {
+      display: none;
+    }
+    .committee-content-container {
+      .committee-card {
+        width: 25%;
+        padding: 0px 10px;
+      }
+    }
+    #section-img-2 {
+      width: 75%;
+    }
+    .checkbox-section {
+      #sign-up {
+        padding-left: 20px;
+        font-size: 16px;
+      }
+      #checkbox {
+        margin-top: 5px;
+      }
+    }
+    .top-text {
+      padding: 30px 0px 20px 0px;
+    }
+  }
+
+  .section-container {
+    .button {
+      width: 30%;
+    }
+    a.button {
+      font-size: 20px;
+    }
+  }
+
+  .recent-campaigns-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card-container {
+      width: 47%;
+      margin: 30px 10px 10px 10px;
+      .image {
+        #card-img {
+          height: 200px;
+        }
+      }
+    }
+    .button-container {
+      margin: 0;
+    }
+
+    .btn-campaigns {
+      width: 100%;
+      margin-top: 320px;
+      padding: 20px 60px;
+    }
+  }
+
+  .recent-campaigns-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card-container {
+      width: 47%;
+      margin: 30px 8px 10px 10px;
+      .image {
+        #card-img {
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .petitions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card-container {
+      width: 46%;
+      margin: 30px 10px 10px 10px;
+      .image {
+        #card-img {
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .section-container .card-container-news {
+    display: flex;
+    flex-wrap: wrap;
+
+    .image {
+      width: 30%;
+
+      #card-img {
+        height: 200px;
+      }
+    }
+    .news-text-content{
+      padding-left: 20px;
+      text-align: left;
+      width: 70%;
+    }
+    .news-text-content h3,p {
+      text-align: left;
+    }
+  }
+
+  .padding-container {
+    padding: 0px 30px;
+    button.button{
+      font-size: 20px;
+    }
+  }
+  .carousel-sponsors {
+    display: none;
+  }
+  .sponsors-img-container {
+    display: block;
+    #sponsors {
+      width: 100%;
+    }
+  }
+  .section-container-3 {
+    padding: 30px 60px;
+    .more-details-section {
+      justify-content: center;
+
+      .details-container {
+        width: 40%;
+        padding-left: 30px;
+        order: 2;
+      }
+      .details-img {
+        width: 60%;
+        max-width: 500px;
+        margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .donate-form-container {
+    margin: 30px 60px 60px 60px;
+    padding: 30px;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  h1, h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 30px 0px;
+  }
+
+  #btn-back-to-top {
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .gallery-section-container {
+    .gallery-container{
+      .gallery-img {
+        padding: 10px;
+        width: 25%;
+        height: 300px;
+      }
+    }
+  }
+
+  .section-container, .section-container-2 {
+    padding: 100px;
+
+    .image-overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .image-overlay:hover {
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+    form {
+      margin-top: 30px;
+      .form-control {
+        padding: 20px;
+      }
+    }
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      .form-container {
+        width: 50%;
+        padding: 20px;
+      }
+      .image-container {
+        display: block;
+        width: 50%;
+        padding: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .pg-text {
+      font-size: 20px;
+      line-height: 40px;
+    }
+    .pg-sub-text {
+      font-size: 16px;
+      line-height: 25px;
+      margin: 20px 0px;
+    }
+  }
+
+  .section-container .card-container-news {
+      .image {
+        #card-img {
+          height: 315px;
+        }
+      }
+    .news-text-content{
+      padding: 20px 30px;
+      text-align: left;
+      width: 70%;
+    }
+    .news-text-content h3,p {
+      text-align: left;
+    }
+  }
+
+  .recent-campaigns-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card-container {
+      width: 31%;
+      margin: 30px 10px 10px 10px;
+    }
+    .btn-campaigns {
+      width: 100%;
+      margin-top: 30px;
+      padding: 20px 60px;
+    }
+  }
+
+  .petitions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card-container {
+      width: 31%;
+      margin: 30px 10px 10px 10px;
+      .image {
+        #card-img {
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .section-container-2 .content-container {
+    flex-direction: row;
+    #section-img {
+      width: 100%;
+    }
+    .text-content {
+      width: 65%;
+      .pg-text {
+        text-align: left;
+        padding-right: 50px;
+      }
+    }
+    .content {
+      width: 35%;
+    }
+  }
+
+  .section-container {
+    .content-container {
+      .video-container {
+        width:70%;
+        margin: auto;
+        margin-top: 50px;
+    }
+  }
+  .link-container-socials {
+    a i {
+      margin: 0px 50px;
+      font-size: 45px;
+    }
+    i:hover {
+      color: $blue;
+      transition: 0.2s ease;
+    }
+  }
+  .donate-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    .donate-text {
+      width: 50%;
+      padding: 0px 20px;
+    }
+  }
+}
+
+  .section-container-2 {
+    .committee-content-container{
+      .committee-card {
+        padding: 20px 10px;
+        .committee-img {
+          height: 200px;
+        }
+        .pg-sub-text {
+          font-size: 16px;
+          text-align: left;
+        }
+      }
+    }
+    .contact-form-section {
+      display: flex;
+      flex-wrap: wrap;
+      .contact-form {
+        width: 60%;
+        padding-right: 60px;
+      }
+      .contact-img {
+        width: 40%;
+        #section-img-2 {
+          width: 100%;
+        }
+      }
+    }
+    .form-button {
+      margin: 0;
+    }
+  }
+
+  .section-container-3 {
+    .more-details-section {
+      padding: 20px 0px 50px 0px;
+      .details-container {
+        width: 30%;
+        padding-left: 30px;
+        order: 2;
+      }
+      .details-img {
+        width: 70%;
+        max-width: 650px;
+        margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+    .pg-sub-text {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
+  .donate-form-container {
+    margin: auto;
+    margin-bottom: 100px;
+    max-width: 1000px;
+
+    .checkbox-section {
+      #sign-up {
+        font-size: 16px;
+        padding-left: 20px;
+      }
+      #check-box {
+        margin-top: 5px;
+      }
+    }
+    .form-container-half {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .form-outline {
+        width: 48%;
+      }
+    }
+    .form-control {
+      padding: 20px;
+    }
+    h3 {
+      font-size: 25px;
+    }
+    .button {
+      width: 47%;
+      font-size: 20px;
+      padding: 20px;
+      margin: 10px;
+    }
+    .button-primary {
+      font-size: 20px;
+      width: 90%;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .donation-btn-container {
+      .price-btn {
+        width: 30%;
+        font-size: 20px;
+        padding: 20px;
+        margin: 10px;
+      }
+    }
+  }
+}
